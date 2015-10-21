@@ -1,8 +1,30 @@
 #board {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .box {
   border: 1px solid black;
+  cursor: pointer;
+  font-size: 50px;
   height: 150px;
+  padding: 38px 0;
+}
+
+.X {
+  color: #f2183d;
+}
+
+.O {
+  color: #4ecdc4;
+}
+
+.btn-reset {
+  background-color: #f2183d;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #4ecdc4;
+  color: white;
 }
