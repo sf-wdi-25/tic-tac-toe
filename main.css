@@ -2,7 +2,19 @@
   margin-top: 10px;
 }
 
+div {
+	font-size: 75px;
+}
+
 .box {
   border: 1px solid black;
   height: 150px;
+}
+
+.X {
+	color: red;
+}
+
+.O {
+	color: blue;
 }

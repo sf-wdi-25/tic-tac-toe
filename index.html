@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- bootstrap css -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   <!-- custom styles -->
+  <link rel="stylesheet" href="main.css">
 
   <title>Tic Tac Toe</title>
 </head>
@@ -29,29 +31,30 @@
         <!-- you can nest rows inside of columns! -->
         <!-- our board has 3 rows, each with 3 columns inside -->
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="top-left"></div>
+          <div class="col-xs-4 box" id="top-middle"></div>
+          <div class="col-xs-4 box" id="top-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="center-left"></div>
+          <div class="col-xs-4 box" id="center-middle"></div>
+          <div class="col-xs-4 box" id="center-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="bottom-left"></div>
+          <div class="col-xs-4 box" id="bottom-middle"></div>
+          <div class="col-xs-4 box" id="bottom-right"></div>
         </div>
       </div>
     </div>
   </div>
   
   <!-- jquery -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- custom script -->
+  <script src="main.js"></script>
 
 </body>
 </html>
