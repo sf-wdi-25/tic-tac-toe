@@ -4,13 +4,12 @@ $(document).ready(function(){
 //each time, but it overlays it, so it could potentilly work anyways,
 //but isn't a good solution.
 
-//alernating X's and O's
-
 	var count = 0;
 	$(".box").click(function() {
 		if (count % 2 === 0  && $(this).text() !== ("X") && $(this).text() !== ("O")) {
 			$(this).text("X");
 			$(this).css({"color": "blue", "font-size": "80px"});
+			checkX_Win();
 			count++;
 			$(".page-header").text("Go O");
 			
@@ -18,6 +17,7 @@ $(document).ready(function(){
 		} else if (count % 2 !== 0 && $(this).text() !== ("X") && $(this).text() !== ("O")) {
 			$(this).text("O");
 			$(this).css({"color": "red", "font-size": "80px"});
+			checkO_Win();
 			count++;
 			$(".page-header").text("Go X");
 			
@@ -30,3 +30,60 @@ $(document).ready(function(){
 		});
 });
 
+
+var winsX = 0;
+function winRamificationsX() {
+	alert("X wins!");
+	$(".box").text(" ");
+	winsX ++;
+}
+
+var winsO = 0;
+function winRamificationsO() {
+	alert("O wins!");
+	$(".box").text(" ");
+	winsO ++;
+}
+
+
+//Check X Win conditions
+
+function checkX_Win(){
+	if ($(".top").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".middle").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".bottom").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".left").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".center").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".right").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".diagonal1").text() === ("XXX")) {
+		winRamificationsX();
+	} else if ($(".diagonal2").text() === ("XXX")) {
+		winRamificationsX();
+	}
+}
+
+function checkO_Win(){
+	if ($(".top").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".middle").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".bottom").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".left").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".center").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".right").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".diagonal1").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".diagonal2").text() === ("OOO")) {
+		winRamificationsO();
+	}
+}

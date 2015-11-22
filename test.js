@@ -9,6 +9,7 @@ $(document).ready(function(){
 		if (count % 2 === 0  && $(this).text() !== ("X") && $(this).text() !== ("O")) {
 			$(this).text("X");
 			$(this).css({"color": "blue", "font-size": "80px"});
+			checkX_Win();
 			count++;
 			$(".page-header").text("Go O");
 			
@@ -31,16 +32,22 @@ $(document).ready(function(){
 
 //Check X Win conditions
 
-if ($(".top").text() === ("XXX")) {
-	alert("X wins!");
-} else if {$(".middle").text() === ("XXX")) {
-	alert("X wins!");
-} else if {$(".bottom").text() === ("XXX")) {
-	alert("X wins!");
-} else if {$(".left").text() === ("XXX")) {
-	alert("X wins!");
-} else if {$(".center").text() === ("XXX")) {
-	alert("X wins!");
-} else if {$(".right").text() === ("XXX")) {
-	alert("X wins!");
-} 
+function checkX_Win(){
+	if ($(".top").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".middle").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".bottom").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".left").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".center").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".right").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".diagonal1").text() === ("XXX")) {
+		alert("X wins!");
+	} else if ($(".diagonal2").text() === ("XXX")) {
+		alert("X wins!");
+	}
+}
