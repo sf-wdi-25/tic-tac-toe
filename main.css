@@ -6,6 +6,10 @@ div {
 	font-size: 75px;
 }
 
+.current-move {
+	font-size: 45px;
+}
+
 .box {
   border: 1px solid black;
   height: 150px;
@@ -17,4 +21,9 @@ div {
 
 .O {
 	color: blue;
+}
+
+.wins {
+	font-size: 20px;
+	padding: 10px;
 }
