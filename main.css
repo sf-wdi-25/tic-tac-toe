@@ -5,4 +5,27 @@
 .box {
   border: 1px solid black;
   height: 150px;
+  padding: 38px;
+  font-size: 55px;
+  font-weight: bold;
 }
+
+.btn {
+	margin-top:20px;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.X {
+	color: blue;
+}
+
+.O {
+	color: red;
+}
+
+
