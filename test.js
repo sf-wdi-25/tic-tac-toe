@@ -4,8 +4,6 @@ $(document).ready(function(){
 //each time, but it overlays it, so it could potentilly work anyways,
 //but isn't a good solution.
 
-//alernating X's and O's
-
 	var count = 0;
 	$(".box").click(function() {
 		if (count % 2 === 0  && $(this).text() !== ("X") && $(this).text() !== ("O")) {
@@ -30,3 +28,19 @@ $(document).ready(function(){
 		});
 });
 
+
+//Check X Win conditions
+
+if ($(".top").text() === ("XXX")) {
+	alert("X wins!");
+} else if {$(".middle").text() === ("XXX")) {
+	alert("X wins!");
+} else if {$(".bottom").text() === ("XXX")) {
+	alert("X wins!");
+} else if {$(".left").text() === ("XXX")) {
+	alert("X wins!");
+} else if {$(".center").text() === ("XXX")) {
+	alert("X wins!");
+} else if {$(".right").text() === ("XXX")) {
+	alert("X wins!");
+} 

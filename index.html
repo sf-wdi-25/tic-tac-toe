@@ -6,13 +6,19 @@
   <!-- set viewport to device width to make site responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="main.css">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  </head>
   <!-- custom styles -->
 
   <title>Tic Tac Toe</title>
 </head>
 <body>
+
+ 
+
   <div class="container text-center">
     <div class="row">
       <div class="col-md-12">
@@ -20,6 +26,9 @@
         <hr>
       </div>
     </div>
+
+     <div class="page-header">First turn goes to X!</div>
+
     <div class="row">
 
       <!-- a column represents our game board -->
@@ -29,29 +38,31 @@
         <!-- you can nest rows inside of columns! -->
         <!-- our board has 3 rows, each with 3 columns inside -->
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box top left" id="top-left"></div>
+          <div class="col-xs-4 box top center" id="top-center"></div>
+          <div class="col-xs-4 box top right" id="top-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box middle left" id ="middle-left"></div>
+          <div class="col-xs-4 box middle center" id ="middle-center"></div>
+          <div class="col-xs-4 box middle right" id ="middle-left"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box bottom left" id ="bottom-left"></div>
+          <div class="col-xs-4 box bottom center" id ="bottom-center"></div>
+          <div class="col-xs-4 box bottom right" id ="bottom-right"></div>
         </div>
       </div>
     </div>
+    <button>RESET</button>
   </div>
   
   <!-- jquery -->
 
-  <!-- custom script -->
-
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
