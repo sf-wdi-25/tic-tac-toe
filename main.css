@@ -2,7 +2,25 @@
   margin-top: 10px;
 }
 
+h1 {
+	font-family: Lobster;
+}
+
 .box {
   border: 1px solid black;
   height: 150px;
+}
+
+/*.col-xs-4 box {
+	horizontal-align: center;
+	vertical-align: center;
+}*/
+
+/*What I was trying to achieve was for the onClick player icons within the
+individual boxes to be x-axis and y-axis centered when placed*/
+
+
+
+.btn {
+	margin-top: 10px;
 }
