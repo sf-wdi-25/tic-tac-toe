@@ -19,7 +19,7 @@ $('.box').click(function() {
      	count++;
      	console.log(count);
     } else {
-    	console.log("can't let you do that StarFox");
+    	alert("Negative, Ghost Rider, the pattern is full!");
     }
 });
 
