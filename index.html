@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- bootstrap css -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   <!-- custom styles -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="main.css">
 
   <title>Tic Tac Toe</title>
 </head>
@@ -16,8 +19,13 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-md-12">
-        <h1>Tic Tac Toe</h1>
+        <h1>Tic Tac Toe - Play to 3!</h1>
         <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <p class="current-move">Current player: <span id="move">X</span></p>
       </div>
     </div>
     <div class="row">
@@ -29,29 +37,47 @@
         <!-- you can nest rows inside of columns! -->
         <!-- our board has 3 rows, each with 3 columns inside -->
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="top-left"></div>
+          <div class="col-xs-4 box" id="top-middle"></div>
+          <div class="col-xs-4 box" id="top-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="center-left"></div>
+          <div class="col-xs-4 box" id="center-middle"></div>
+          <div class="col-xs-4 box" id="center-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box" id="bottom-left"></div>
+          <div class="col-xs-4 box" id="bottom-middle"></div>
+          <div class="col-xs-4 box" id="bottom-right"></div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-3">
+        <p class="wins">X wins: <span class="x-wins">0</span></p>
+      </div>
+      <div class="col-xs-2 col-xs-offset-2">
+        <p class="wins">O wins: <span class="o-wins">0</span></p>
+      </div>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-secondary clear">Clear the board</button>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-secondary reset">Reset the score</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 credits">Photo credit: <a href="http://avaluk.tumblr.com/">Cederik Leeuwe Photography</a></div>
     </div>
   </div>
   
   <!-- jquery -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- custom script -->
+  <script src="main.js"></script>
 
 </body>
 </html>
