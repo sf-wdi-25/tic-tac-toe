@@ -6,9 +6,9 @@ $(document).ready(function(){
 		
 	$('.box').on("click", function youClicked(event) {
 		if(count % 2 === 0) {
-		var choice = "X"
+		choice = "X"
 		} else {
-		var choice = "O"
+		choice = "O"
 		} if($(this).text() === "") {
 			$(this).text(choice);
 			count = count + 1;
@@ -17,6 +17,7 @@ $(document).ready(function(){
 	});
 
 	$('#reset').on("click", function clear(event) {
-		$('.box').text("")
+		$('.box').text("");
+		count = 0;
 	})
 })
