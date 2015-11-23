@@ -17,6 +17,7 @@ $(document).ready(function(){
 		} else if (count % 2 !== 0 && $(this).text() !== ("X") && $(this).text() !== ("O")) {
 			$(this).text("O");
 			$(this).css({"color": "red", "font-size": "80px"});
+			checkO_Win();
 			count++;
 			$(".page-header").text("Go X");
 			
@@ -30,24 +31,64 @@ $(document).ready(function(){
 });
 
 
+
+var winsX = 0;
+function winRamificationsX() {
+	alert("X wins!");
+	$(".box").text(" ");
+	winsX ++;
+	$("#winsX").text(winsX)
+}
+
+var winsO = 0;
+function winRamificationsO() {
+	alert("O wins!");
+	$(".box").text(" ");
+	winsO ++;
+	$("#winsO").text(winsO)
+}
+
+
 //Check X Win conditions
 
 function checkX_Win(){
 	if ($(".top").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".middle").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".bottom").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".left").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".center").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".right").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".diagonal1").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
 	} else if ($(".diagonal2").text() === ("XXX")) {
-		alert("X wins!");
+		winRamificationsX();
+	}
+}
+
+//Check O win conditions
+
+function checkO_Win(){
+	if ($(".top").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".middle").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".bottom").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".left").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".center").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".right").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".diagonal1").text() === ("OOO")) {
+		winRamificationsO();
+	} else if ($(".diagonal2").text() === ("OOO")) {
+		winRamificationsO();
 	}
 }

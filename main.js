@@ -31,11 +31,14 @@ $(document).ready(function(){
 });
 
 
+
 var winsX = 0;
 function winRamificationsX() {
 	alert("X wins!");
 	$(".box").text(" ");
 	winsX ++;
+	$("#winsX").text(winsX);
+	
 }
 
 var winsO = 0;
@@ -43,6 +46,8 @@ function winRamificationsO() {
 	alert("O wins!");
 	$(".box").text(" ");
 	winsO ++;
+	$("#winsO").text(winsO);
+
 }
 
 
@@ -67,6 +72,8 @@ function checkX_Win(){
 		winRamificationsX();
 	}
 }
+
+//Check O win conditions
 
 function checkO_Win(){
 	if ($(".top").text() === ("OOO")) {
