@@ -1,7 +1,7 @@
 // wait for DOM to load before running JS
 $(function() {
 
-	// your code here
+	// Global Declorations
 
 	var players = ["x", "o"];
 	/*var tacs = {
@@ -9,13 +9,11 @@ $(function() {
 		"o": $('<i class="fa fa-twitter"></i>')
 	};*/
 
-	//player objects
 	var tacs = {
-
-		//key  hash value
 		"x": $('<span>x</span>'),
 		"o": $('<span>o</span>')
 	};
+
 	//setting turns equal to zero
 	var turn = 0;
 
@@ -33,6 +31,20 @@ $(function() {
 		[0, 0, 0]
 	];
 
+	function detectWin() {
+		// based on the gameGrid data,
+		// detect a win
+		for (var y = 0; y < gameGrid.length; y++) {
+			for(var x = 0; x < gameGrid[y].length; x++) {
+				/*
+
+
+				*/
+
+			}
+		}
+	}
+
 	function update(e) {
 		var clickX = 0;
 		var clickY = 0;
@@ -49,19 +61,43 @@ $(function() {
 		}
 
 		// prevent players overwriting each others moves
+		// update(remove(e.this));
 
-		gameGrid[clickY][clickX] = turn+1;
-		domGrid[clickY][clickX].html($(tacs[players[turn]]).clone());
+		// if spot not taken...
+		if(gameGrid[clickY][clickX] == 0) {
+			// update game data and DOM to match
+			gameGrid[clickY][clickX] = turn+1;
+			domGrid[clickY][clickX].html($(tacs[players[turn]]).clone());
+			if(turn == 0){
+				turn = 1;
+			} else { 
+				turn = 0;
+			}
+		} else {
+			// otherwise, spot was taken and nothing happens
+			console.log("that spot is taken!");
+			alert("This spot is TAKEN LMAO")
+		}
 
 		// after changes possibly take place, try to detect win scenario
 		// e.g. 3 in a row in any direction
-
-		if(turn == 0) turn = 1;
-		else turn = 0;
+		detectWin();
+		
 	}
 
-	$("div.box").on('click', update);
+	$('.btn').click(function clearBox(){
+		//setting the data back to zero in the array
+		//this goes through the grid and detects the size of the array
+		for(var y = 0; y<gameGrid.length; y++){
+			for(var x = 0; x<gameGrid[y].length; x++){
+				//I set the variable back to zero using x and y as the index detector
+				gameGrid[x][y] = 0;
+			}
+		}
+		turn = 0;
 
-	
+		$('.box').empty();
+	})
+	$("div.box").on('click', update);
 
 });
