@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
 
   <!-- set viewport to device width to make site responsive -->
@@ -9,6 +10,7 @@
   <!-- bootstrap css -->
 
   <!-- custom styles -->
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 
   <title>Tic Tac Toe</title>
 </head>
@@ -28,30 +30,33 @@
 
         <!-- you can nest rows inside of columns! -->
         <!-- our board has 3 rows, each with 3 columns inside -->
-        <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <table>
+            <tr id="row1">
+              <td id= "1" class="square"></td>
+              <td id= "2" class="square a"></td>
+              <td id= "3" class="square"></td>
+            </tr>
+            <tr id="row2">
+              <td id="4" class="square b"></td>
+              <td id="5" class="square a b"></td>
+              <td id="6" class="square b"></td>
+            </tr>
+            <tr id="row3">
+              <td id="7" class="square"></td>
+              <td id="8" class="square a"></td>
+              <td id="9" class="square"></td>
+            </tr>
+          </table>
         </div>
 
-        <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-        </div>
-      </div>
     </div>
   </div>
   
   <!-- jquery -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 
   <!-- custom script -->
+  <div style="text-align:center;"><button class="invisible" id="newGame">New game!</button></div>
 
 </body>
 </html>
