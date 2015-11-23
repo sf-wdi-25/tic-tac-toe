@@ -1,5 +1,3 @@
-// wait for DOM to load before running JS
-$(document).ready(function(){
 
 var oldClick = 0;
 
@@ -80,23 +78,12 @@ function evalCells(cellValues) {
     return true;
   } else {
     return false; 
+
+    $(document).ready(function(){
   }
 
-}
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
