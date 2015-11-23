@@ -1,8 +1,37 @@
-#board {
-  margin-top: 10px;
+.square{
+    width:100px;
+    height:100px;
 }
 
-.box {
-  border: 1px solid black;
-  height: 150px;
+.a{
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+}
+
+.b{
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
+
+#container{
+    text-align:center;
+}
+
+#board {
+    display: inline-block;
+    margin-top:2%;
+
+}
+.invisible {
+    visibility:hidden;
+}
+.visible {
+    visibility:visible;
+}
+
+
+table {
+    background-color: #FAFAAF;
+    text-align:center;
+      font: 400 30px/1.5 'Pacifico', Helvetica, sans-serif;
 }
