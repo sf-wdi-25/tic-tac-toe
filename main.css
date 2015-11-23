@@ -1,8 +1,28 @@
 #board {
   margin-top: 10px;
+  font-family: serif;
 }
 
 .box {
-  border: 1px solid black;
+  border: 2px solid purple;
   height: 150px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 35px;
+  font-family: serif;
+}
+
+h1 { 
+	font-family: serif; 
+	color: purple;
+}
+
+button {
+
+	margin-left: 75px;
+	margin-top: 25px;
+	font-family: serif; 
+	font-size: 15px;
+	background-color: purple;
+	color: white;
 }
