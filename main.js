@@ -38,13 +38,15 @@ $(function() {
   function whoWon () {
     
   }
-  winner ===  ["div#a","div#b","div#c"],
-              ["div#d","div#e","div#f"],
-              ["div#g","div#h","div#i"],
-              ["div#a","div#d","div#g"],
-              ["div#b","div#e","div#h"],
-              ["div#c","div#f","div#i"],
-              ["div#a","div#e","div#i"],
-              ["div#c","div#e","div#g"],
+  winCombos ===  ["div#a","div#b","div#c"],
+                 ["div#d","div#e","div#f"],
+                 ["div#g","div#h","div#i"],
+                 ["div#a","div#d","div#g"],
+                 ["div#b","div#e","div#h"],
+                 ["div#c","div#f","div#i"],
+                 ["div#a","div#e","div#i"],
+                 ["div#c","div#e","div#g"],
+
+                 array.sort()
 */
 });
