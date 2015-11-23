@@ -21,9 +21,9 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 
 ## Getting Started
 
-1. Fork this repo, and clone it into your `develop` folder on your local machine.
+X1. Fork this repo, and clone it into your `develop` folder on your local machine.
 
-2. Use `index.html` as your starting point on this project. There is already some starter code in `index.html`, `main.css`, and `main.js`.
+X2. Use `index.html` as your starting point on this project. There is already some starter code in `index.html`, `main.css`, and `main.js`.
 
 3. Make sure that jQuery and Bootstrap's CSS are linked in `index.html`. Also link your custom CSS and JavaScript files to `index.html`.
 
