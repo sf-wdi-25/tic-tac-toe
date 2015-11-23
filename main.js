@@ -117,5 +117,26 @@ $(function() {
 		}
 	}
 
+	function diagonalWins(player){
+		for(var y = 0; y < gameGrid.length; y++){
+			var counter = 0;
+			for(var x = 0; x <gameGrid[y].length){
+				if()
+			}
+		}
+	}
+
+	function playerWins(player){
+		var playerOne = 1;
+		var playerTwo = 2;
+		if(playerOne === true){
+			playerOne++
+			console.log()
+		}else if(playerTwo === true){
+			playerTwo++
+		}
+		return playerOne playerTwo;
+	}
+
 	$("div.box").on('click', update);
 });
