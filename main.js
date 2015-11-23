@@ -2,6 +2,8 @@
 $(document).ready(function() {
 	$('.btn').click(function clearBoard(){
 		$('.box').empty();
+		$('.box').removeClass('oColor');
+		$('.box').removeClass('xColor');
 		turn = 1;
 		moveCount= 0; 
 
@@ -18,9 +20,11 @@ $(document).ready(function() {
 			if($(this).text()=== "") {
 				if(turn===1) {
 					$(this).text(playerX);
+					$(this).addClass('xColor');
 					turn =2 ;
 				} else if (turn===2) {
 					$(this).text(playerO);
+					$(this).addClass('oColor');
 					turn =1 ;
 				}
 				moveCount++;
@@ -75,15 +79,12 @@ var board = [[topL, topM, topR],
 
 
 
-//	//if ( (board[0][0] ===board[0][1]) && (board[0][0] === board[0][2]) === winningCombo[0] ) {
-	//	alert('winner!');
-	//}
 
 };
 
  
 
-
+//I made variables to display move count, Xwins, and Owins, but did not have enough time to put them into be displayed on the html page. 
 
 
 
