@@ -71,6 +71,7 @@ $(function() {
 		// after changes possibly take place, try to detect win scenario
 		// e.g. 3 in a row in any direction
 		detectWin();
+
 		
 	}
 	//clear data and dom elements 
@@ -88,6 +89,8 @@ $(function() {
 			$('.box').empty();
 		})
 
+	//winner checks
+
 	function horizontalWin(player){
 	
 		for(var y = 0; y < gameGrid.length; y++) {
@@ -96,7 +99,7 @@ $(function() {
 				if(gameGrid[y][x] === player) counter++;
 			}
 			if(counter === 3){
-				return console.log(player + " wins");
+				return alert(player + " wins");
 			}
 		}
 		
@@ -109,7 +112,7 @@ $(function() {
 				if(gameGrid[x][y] === player) counter ++;
 			}
 			if(counter === 3){
-				return console.log(player + " wins");
+				return alert(player + " wins");
 			}
 		}
 	}
