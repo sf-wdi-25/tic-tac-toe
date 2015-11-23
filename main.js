@@ -5,15 +5,18 @@ $(document).ready(function(){
 	var count = 0;
 	
 	$('p').text("It is player X's turn")
-		
+
 	$('.box').on("click", function youClicked(event) {
-		if(count % 2 === 0) {
-		choice = "X"
-		$('p').text("It is player O's turn")
-		} else {
-		choice = "O"
-		$('p').text("It is player X's turn")
-		} if($(this).text() === "") {
+		if($(this).text() === "") {
+			if(count % 2 === 0) {
+				choice = "X"
+				$('p').text("It is player O's turn")
+				$(this).css('color', 'orange');
+			} else {
+				choice = "O"
+				$('p').text("It is player X's turn")
+				$(this).css('color', 'darkgreen');
+			}
 			$(this).text(choice);
 			count = count + 1;
 			console.log(count);
