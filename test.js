@@ -37,7 +37,7 @@ function winRamificationsX() {
 	alert("X wins!");
 	$(".box").text(" ");
 	winsX ++;
-	$("#winsX").text(winsX)
+	$("#winsX").text(winsX);
 }
 
 var winsO = 0;
@@ -45,7 +45,7 @@ function winRamificationsO() {
 	alert("O wins!");
 	$(".box").text(" ");
 	winsO ++;
-	$("#winsO").text(winsO)
+	$("#winsO").text(winsO);
 }
 
 

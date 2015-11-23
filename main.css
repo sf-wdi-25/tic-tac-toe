@@ -5,9 +5,13 @@
 
 .box {
   border: 1px solid black;
-  height: 150px;
+  height: 120px;
 }
 
 .page-header {
 	font-size: 30px;
+}
+
+.inline {
+	color: white;
 }
