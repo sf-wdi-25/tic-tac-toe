@@ -1,6 +1,6 @@
 // wait for DOM to load before running JS
 $(function() {
-
+	alert(" 1 is x and O is 2")
 	// Global Declorations
 
 	var players = ["x", "o"];
@@ -32,17 +32,10 @@ $(function() {
 	];
 
 	function detectWin() {
-		// based on the gameGrid data,
-		// detect a win
-		for (var y = 0; y < gameGrid.length; y++) {
-			for(var x = 0; x < gameGrid[y].length; x++) {
-				/*
-
-
-				*/
-
-			}
-		}
+		horizontalWin(1);
+		horizontalWin(2);
+		verticalWins(1);
+		verticalWins(2);
 	}
 
 	function update(e) {
@@ -59,10 +52,6 @@ $(function() {
 				}
 			}
 		}
-
-		// prevent players overwriting each others moves
-		// update(remove(e.this));
-
 		// if spot not taken...
 		if(gameGrid[clickY][clickX] == 0) {
 			// update game data and DOM to match
@@ -76,7 +65,7 @@ $(function() {
 		} else {
 			// otherwise, spot was taken and nothing happens
 			console.log("that spot is taken!");
-			alert("This spot is TAKEN LMAO")
+			alert("This spot is TAKEN LMAO");
 		}
 
 		// after changes possibly take place, try to detect win scenario
@@ -84,20 +73,46 @@ $(function() {
 		detectWin();
 		
 	}
-
+	//clear data and dom elements 
 	$('.btn').click(function clearBox(){
 		//setting the data back to zero in the array
 		//this goes through the grid and detects the size of the array
 		for(var y = 0; y<gameGrid.length; y++){
 			for(var x = 0; x<gameGrid[y].length; x++){
-				//I set the variable back to zero using x and y as the index detector
+					//I set the variable back to zero using x and y as the index detector
 				gameGrid[x][y] = 0;
+				}
+			}
+			turn = 0;
+
+			$('.box').empty();
+		})
+
+	function horizontalWin(player){
+	
+		for(var y = 0; y < gameGrid.length; y++) {
+			var counter = 0;
+			for(var x = 0; x < gameGrid[y].length; x++) {
+				if(gameGrid[y][x] === player) counter++;
+			}
+			if(counter === 3){
+				return console.log(player + " wins");
 			}
 		}
-		turn = 0;
+		
+	}
 
-		$('.box').empty();
-	})
+	function verticalWins(player){
+		for(var y = 0; y < gameGrid.length; y++){
+			var counter = 0;
+			for (var x = 0; x < gameGrid[y].length; x++){
+				if(gameGrid[x][y] === player) counter ++;
+			}
+			if(counter === 3){
+				return console.log(player + " wins");
+			}
+		}
+	}
+
 	$("div.box").on('click', update);
-
 });
