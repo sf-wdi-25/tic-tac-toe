@@ -1,3 +1,9 @@
+body {
+	background-image: url("background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Raleway', sans-serif;
+}
 #board {
   margin-top: 10px;
 }
@@ -6,13 +12,22 @@ div {
 	font-size: 75px;
 }
 
+.col-md-12 {
+	background-color: rgba(255,255,255,0.6);
+}
+
+p {
+	background-color: rgba(255,255,255,0.6);
+}
+
 .current-move {
-	font-size: 45px;
+	font-size: 35px;
 }
 
 .box {
   border: 1px solid black;
   height: 150px;
+  background-color: rgba(255,255,255,0.6);
 }
 
 .X {
@@ -26,4 +41,16 @@ div {
 .wins {
 	font-size: 20px;
 	padding: 10px;
+}
+
+.col-md-6 {
+	background-color: rgba(255,255,255,0.6);
+}
+
+.credits {
+	font-size: 18px;
+}
+
+a {
+	color: black;
 }
