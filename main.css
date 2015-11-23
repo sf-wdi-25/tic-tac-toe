@@ -1,8 +1,58 @@
-#board {
-  margin-top: 10px;
+h1 {
+	color: rgba(87, 156, 57, 1);
+	font-family: "Courier New", Courier, monospace;
+}
+
+body {
+	background-color: black;
+}
+
+.container {
+   display: table;
+   margin:  0 auto;
 }
 
 .box {
-  border: 1px solid black;
+  /* border: 1px solid blue; */
   height: 150px;
+}
+
+.blank {
+	background-image: url(Tic.Taco-01.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.X {
+	background-image: url(Tic.Taco-04.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+}
+
+.O {
+	background-image: url(Tic.Taco-02.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+}
+
+#row {
+	float: left;
+	display: block;
+}
+
+#reset {
+	border: solid rgba(87, 156, 57, 1);
+ 	margin-top: 20px;
+	padding: 5px;
+	color: rgba(87, 156, 57, 1);
+	font-family: "Courier New", Courier, monospace;
+}
+
+#board {
+  margin-top: 10px;
 }
