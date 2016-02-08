@@ -106,4 +106,5 @@ function checkO_Win(){
 	} else if ($(".diagonal2").text() === ("OOO")) {
 		winRamificationsO();
 	}
+
 }
