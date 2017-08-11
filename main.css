@@ -1,8 +1,49 @@
+.container {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #board {
   margin-top: 10px;
+  padding: 50px;
 }
 
 .box {
-  border: 1px solid black;
-  height: 150px;
+  height: 120px;
+}
+
+.page-header {
+	font-size: 30px;
+}
+
+.inline {
+	color: white;
+}
+
+.left {
+  border-right: 5px solid black;
+}
+
+.right {
+  border-left: 5px solid black;
+}
+
+.top {
+  border-bottom: 5px solid black;
+}
+
+.bottom {
+  border-top: 5px solid black;
+}
+
+.reset {
+    background-color: #107714; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    margin: 15px;
 }

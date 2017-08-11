@@ -11,7 +11,7 @@ $(document).ready(function(){
 			$(this).css({"color": "blue", "font-size": "80px"});
 			checkX_Win();
 			count++;
-			$("h2").text("Go O");
+			$(".page-header").text("Go O");
 			
 
 		} else if (count % 2 !== 0 && $(this).text() !== ("X") && $(this).text() !== ("O")) {
@@ -19,18 +19,16 @@ $(document).ready(function(){
 			$(this).css({"color": "red", "font-size": "80px"});
 			checkO_Win();
 			count++;
-			$("h2").text("Go X");
+			$(".page-header").text("Go X");
+			
 		}
 	});
-
 
 //working RESET button
 	$("button").on("click", function() {
 		$(".box").text(" ");
-		count = 0;
-	
 		});
-	});
+});
 
 
 
@@ -40,13 +38,6 @@ function winRamificationsX() {
 	$(".box").text(" ");
 	winsX ++;
 	$("#winsX").text(winsX);
-	count = 0;
-	if (winsX === 3) {
-		alert("X HAS DESTROYED YOU AND REIGNS ETERNAL!!!!");
-		$("#winsX").text(0);
-		$("#winsO").text(0);
-	}
-	
 }
 
 var winsO = 0;
@@ -55,12 +46,6 @@ function winRamificationsO() {
 	$(".box").text(" ");
 	winsO ++;
 	$("#winsO").text(winsO);
-	count = 0;
-	if (winsO === 3) {
-		alert("O HAS ANIHILATED YOU!!! BOW THOUST HEAD IN SHAME!!!");
-		$("#winsX").text(0);
-		$("#winsO").text(0);
-	}
 }
 
 
@@ -106,5 +91,4 @@ function checkO_Win(){
 	} else if ($(".diagonal2").text() === ("OOO")) {
 		winRamificationsO();
 	}
-
 }

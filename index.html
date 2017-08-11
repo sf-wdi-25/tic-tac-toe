@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,19 @@
   <!-- set viewport to device width to make site responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="main.css">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  </head>
   <!-- custom styles -->
 
   <title>Tic Tac Toe</title>
 </head>
 <body>
+
+ 
+
   <div class="container text-center">
     <div class="row">
       <div class="col-md-12">
@@ -20,6 +27,14 @@
         <hr>
       </div>
     </div>
+
+     <h2>Go X</h2>
+      
+        <span class="col-xs-3 label-primary inline">X's wins</span>
+        <span class="col-xs-3 label-danger inline" id="winsX">     </span>
+        <span class="col-xs-3 label-primary inline">O's wins</span>
+        <span class="col-xs-3 label-danger inline" id ="winsO">     </span>
+      
     <div class="row">
 
       <!-- a column represents our game board -->
@@ -29,29 +44,31 @@
         <!-- you can nest rows inside of columns! -->
         <!-- our board has 3 rows, each with 3 columns inside -->
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box top left diagonal1" id="top-left"></div>
+          <div class="col-xs-4 box top center" id="top-center"></div>
+          <div class="col-xs-4 box top right diagonal2" id="top-right"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box middle left" id ="middle-left"></div>
+          <div class="col-xs-4 box middle center diagonal1 diagonal2" id ="middle-center"></div>
+          <div class="col-xs-4 box middle right" id ="middle-left"></div>
         </div>
 
         <div class="row">
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
-          <div class="col-xs-4 box"></div>
+          <div class="col-xs-4 box bottom left diagonal2" id ="bottom-left"></div>
+          <div class="col-xs-4 box bottom center" id ="bottom-center"></div>
+          <div class="col-xs-4 box bottom right diagonal1" id ="bottom-right"></div>
         </div>
       </div>
     </div>
+    <button class ="reset">RESET CURRENT GAME</button>
   </div>
   
   <!-- jquery -->
 
-  <!-- custom script -->
-
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
